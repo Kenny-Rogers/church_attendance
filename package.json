@@ -1,0 +1,19 @@
+{
+  "name": "copattendancenodeclient",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kenny-Rogers/church_attendance.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kenny-Rogers/church_attendance/issues"
+  },
+  "homepage": "https://github.com/Kenny-Rogers/church_attendance#readme"
+}
