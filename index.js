@@ -27,6 +27,12 @@ app.get('/members', (req, res) => {
     res.render('pages/members')
 })
 
+//this renders the registration page containing all members for http://localhost:3000/members/ccreate
+app.get('/members/create', (req, res) => {
+    res.render('pages/add_member')
+})
+
+
 //our web application serving webAPP at http://localhost:3000
 app.listen(3000)
 console.log('Serving app at http://localhost:3000')
