@@ -12,13 +12,12 @@ app.use('/public', express.static(path.join(__dirname, '/views/static')))
 app.set('view engine', 'ejs')
 
 //ROUTES 
-//this renders a page for http://localhost:3000/
+//this renders the dashboard for http://localhost:3000/
 app.get('/', (req, res) => {
-    // res.send('Hello world')
-    res.render('pages/structure')
+    res.render('pages/dashboard')
 })
 
-//this renders a page for http://localhost:3000/login
+//this renders a login screen for http://localhost:3000/login
 app.get('/login', (req, res)=> {
     res.render('pages/login')
 })
