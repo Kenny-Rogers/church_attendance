@@ -22,6 +22,11 @@ app.get('/login', (req, res)=> {
     res.render('pages/login')
 })
 
+//this renders the datatable page containing all members for http://localhost:3000/members
+app.get('/members', (req, res) => {
+    res.render('pages/members')
+})
+
 //our web application serving webAPP at http://localhost:3000
 app.listen(3000)
 console.log('Serving app at http://localhost:3000')
