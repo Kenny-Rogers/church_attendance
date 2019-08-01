@@ -2,13 +2,13 @@
 
 This is an attendance records storage system which allows for entry and retrieval of attendance information of church members.
 
-# Features
+## Features
 
-# Screenshots
+## Screenshots
 
-# Installation
+## Installation
 
-# Authors
+## Authors
 - [@rchiskoka](https://github.com/rchriskoka)
 - [@YaaNuamah](https://github.com/YaaNuamah)
 - [@Kenny-Rogers](https://github.com/Kenny-Rogers)
