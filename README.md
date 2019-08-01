@@ -13,6 +13,9 @@ This is an attendance records storage system which allows for entry and retrieva
 - [@YaaNuamah](https://github.com/YaaNuamah)
 - [@Kenny-Rogers](https://github.com/Kenny-Rogers)
 
+## Built With
+- [ElaAdmin HTML5 Admin Dashboard Template](https://github.com/puikinsh/ElaAdmin)
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
