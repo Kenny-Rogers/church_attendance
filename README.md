@@ -7,7 +7,14 @@ This is an attendance records storage system which allows for entry and retrieva
 ## Screenshots
 
 ## Installation
-
+- Clone the repository
+```bash
+$ git clone https://github.com/Kenny-Rogers/church_attendance.git
+```
+- Install the project 
+```bash
+$ npm install
+```
 ## Authors
 - [@rchiskoka](https://github.com/rchriskoka)
 - [@YaaNuamah](https://github.com/YaaNuamah)
