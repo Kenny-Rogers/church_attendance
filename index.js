@@ -32,6 +32,10 @@ app.get('/members/create', (req, res) => {
     res.render('pages/add_member')
 })
 
+//this renders the attendance marking page containing all members for http://localhost:3000/members/ccreate
+app.get('/member_attendance/create', (req, res) => {
+    res.render('pages/mark_attendance')
+})
 
 //our web application serving webAPP at http://localhost:3000
 app.listen(3000)
