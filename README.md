@@ -22,6 +22,8 @@ $ npm install
 
 ## Built With
 - [ElaAdmin HTML5 Admin Dashboard Template](https://github.com/puikinsh/ElaAdmin)
+- [ExpressJs](https://github.com/expressjs/express)
+- [Ejs](https://github.com/mde/ejs)
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
