@@ -823,7 +823,9 @@ aside.left-panel {
 .right-panel {
   background: #f1f2f7;
   margin-left: 280px;
-  margin-top: 55px; }
+  margin-top: 55px;
+  height: 93vh;
+  height: 100%; }
   .right-panel .top-left {
     width: 350px;
     float: left; }
@@ -2090,7 +2092,10 @@ header .form-inline {
 
 /* Footer */
 footer.site-footer {
-  padding: 0 1.875em; }
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 0 1.875em;  }
   footer.site-footer .footer-inner {
     color: #78909c;
     font-family: 'Open Sans';
@@ -2327,7 +2332,9 @@ footer.site-footer {
     top: 51px !important; }
 
   .content {
-    padding: 1.25em; }
+    float: left;
+    padding: 1.875em;
+    width: 100%;}
 
   .flotRealtime2 {
     height: 330px; }

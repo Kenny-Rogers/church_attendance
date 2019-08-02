@@ -1,62 +1,110 @@
-<% include ../partials/header %> <!-- header -->
-<% include ../partials/sidebar %> <!-- sidebar -->
+<% include ../partials/header %>
+<!-- header -->
+<% include ../partials/sidebar %>
+<!-- sidebar -->
 <!-- Start Content -->
 <div class="row">
-    <div class="col-md-12">
-        <div class="card">
-            <div class="card-header">
-                <strong>Add Member</strong> Information 
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header"><strong>Add Member</strong> Information</div>
+      <div class="card-body card-block">
+        <form action="#" method="post" class="form-horizontal">
+          <div class="row form-group">
+            <div class="col col-md-3">
+              <label for="text-input" class=" form-control-label"
+                >Full Name</label
+              >
             </div>
-            <div class="card-body card-block">
-                <form action="#" method="post" class="form-horizontal">
-                    <div class="row form-group">
-                        <div class="col col-md-3"><label for="text-input" class=" form-control-label">Full Name</label></div>
-                        <div class="col-12 col-md-9"><input required type="text" id="text-input" name="full_name" placeholder="Kofi Mensah" class="form-control"></div>
-                    </div>
-                    <div class="row form-group">
-                        <div class="col col-md-3"><label for="email-input" class=" form-control-label">Contact Number</label></div>
-                        <div class="col-12 col-md-9"><input type="text" name="contact_number" pattern="[1-9]{1}[0-9]{9}" placeholder="0244444446" class="form-control"></div>
-                    </div>
-                    <div class="row form-group">
-                        <div class="col col-md-3"><label class=" form-control-label">Gender</label></div>
-                        <div class="col col-md-9">
-                            <div class="form-check-inline form-check ">
-                                <label for="inline-radio1" class="form-check-label mr-3">
-                                    <input type="radio" required id="inline-radio1" name="gender" value="Male" class="form-check-input">Male
-                                </label>
-                                <label for="inline-radio2" class="form-check-label ">
-                                    <input type="radio" required id="inline-radio2" name="gender" value="female" class="form-check-input">Female
-                                </label>
-                            </div>
-                        </div>
-                    </div>
+            <div class="col-12 col-md-9">
+              <input
+                required
+                type="text"
+                id="text-input"
+                name="full_name"
+                placeholder="Kofi Mensah"
+                class="form-control"
+              />
+            </div>
+          </div>
+          <div class="row form-group">
+            <div class="col col-md-3">
+              <label for="email-input" class=" form-control-label"
+                >Contact Number</label
+              >
+            </div>
+            <div class="col-12 col-md-9">
+              <input
+                type="text"
+                name="contact_number"
+                pattern="[1-9]{1}[0-9]{9}"
+                placeholder="0244444446"
+                class="form-control"
+              />
+            </div>
+          </div>
+          <div class="row form-group">
+            <div class="col col-md-3">
+              <label class=" form-control-label">Gender</label>
+            </div>
+            <div class="col col-md-9">
+              <div class="form-check-inline form-check ">
+                <label for="inline-radio1" class="form-check-label mr-3">
+                  <input
+                    type="radio"
+                    required
+                    id="inline-radio1"
+                    name="gender"
+                    value="Male"
+                    class="form-check-input"
+                  />Male
+                </label>
+                <label for="inline-radio2" class="form-check-label ">
+                  <input
+                    type="radio"
+                    required
+                    id="inline-radio2"
+                    name="gender"
+                    value="female"
+                    class="form-check-input"
+                  />Female
+                </label>
+              </div>
+            </div>
+          </div>
 
-                    <div class="row form-group">
-                        <div class="col col-md-3"><label for="select" class=" form-control-label">Home Cell</label></div>
-                        <div class="col-12 col-md-9">
-                            <select name="select" required id="home_cell" class="form-control">
-                                <option value="">Please select</option>
-                                <option value="1">Flagstaff House</option>
-                                <option value="2">Option #2</option>
-                                <option value="3">Option #3</option>
-                            </select>
-                        </div>
-                    </div>
-                
-                    <div class="form-actions form-group">
-                        <button type="submit" class="btn btn-primary btn-sm">
-                            <i class="fa fa-dot-circle-o"></i> Submit
-                        </button>
-                        <button type="reset" class="btn btn-danger btn-sm">
-                            <i class="fa fa-ban"></i> Reset
-                        </button>
-                    </div>
-                </form>
+          <div class="row form-group">
+            <div class="col col-md-3">
+              <label for="select" class=" form-control-label">Home Cell</label>
             </div>
-        </div>
+            <div class="col-12 col-md-9">
+              <select
+                name="select"
+                required
+                id="home_cell"
+                class="form-control"
+              >
+                <option value="">Please select</option>
+                <option value="1">Flagstaff House</option>
+                <option value="2">Option #2</option>
+                <option value="3">Option #3</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-actions form-group">
+            <button type="submit" class="btn btn-primary btn-sm">
+              <i class="fa fa-dot-circle-o"></i> Submit
+            </button>
+            <button type="reset" class="btn btn-danger btn-sm">
+              <i class="fa fa-ban"></i> Reset
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
+  </div>
 </div>
 
-
 <!-- End Content -->
-<% include ../partials/footer %> <!-- footer -->
+<% include ../partials/footer %>
+<!-- footer -->

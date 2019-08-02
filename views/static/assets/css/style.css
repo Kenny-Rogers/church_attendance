@@ -350,8 +350,11 @@ body {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   width: 100%; 
-  min-height: 100%;
-  position: relative;}
+  position: relative;
+ height: 100vh;
+  padding:0; 
+  margin:0; 
+}
 
 p {
   font-size: 16px;
@@ -823,9 +826,11 @@ aside.left-panel {
 
 /* Right panel */
 .right-panel {
-  background: #f1f2f7;
-  margin-left: 280px;
-  margin-top: 55px; }
+     background: #f1f2f7;
+    margin-left: 280px;
+    padding-top: 55px;
+    height: 100%;
+    min-height: calc(100vh - 56px); }
   .right-panel .top-left {
     width: 350px;
     float: left; }
@@ -1199,7 +1204,7 @@ header .form-inline {
 .content {
   float: left;
   padding: 1.875em;
-  width: 100%; }
+  width: 100%;}
 
 .card {
   margin-bottom: 1.875em;
@@ -2092,18 +2097,17 @@ header .form-inline {
 
 /* Footer */
 footer.site-footer {
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: 1rem;
-  text-align: center;
+  position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 0 1.875em; 
+   
 }
   footer.site-footer .footer-inner {
     color: #78909c;
     font-family: 'Open Sans';
     font-size: 14px;
-    line-height: 1.5;
-    padding: 2.45em 1.125em; }
+   padding: 2.45em 1.125em; }
     footer.site-footer .footer-inner a {
       color: #6a7074; }
 
@@ -2333,8 +2337,11 @@ footer.site-footer {
   .user-area .user-menu {
     top: 51px !important; }
 
-  .content {
-    padding: 1.25em; }
+  .content { 
+    float: left;
+    padding: 1.875em;
+    width: 100%;
+    }
 
   .flotRealtime2 {
     height: 330px; }
