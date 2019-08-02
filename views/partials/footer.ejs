@@ -30,6 +30,32 @@
     <!--  Chart js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.7.3/dist/Chart.bundle.min.js"></script>
 
+    <!-- D3 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
+
+    <!-- Calendar HeatMap -->
+    <script type="text/javascript" src="/public/assets/js/cal-heatmap.min.js"></script>
+    <script type="text/javascript">
+        var cal = new CalHeatMap();
+        cal.init({
+            data: {
+                '1534040075':20,
+                '1534644875':20,
+                '1535249675':20,
+                '1535854475':20,
+            },
+    start: new Date(2018, 7, 8), //start date
+    domain: "month",
+    subDomain: "day",
+    cellSize: 13,
+    subDomainTextFormat: "%d",
+    weekStartOnMonday: false,
+    range: 12,
+	displayLegend: true
+        });
+    </script>
+
+
     <!--Chartist Chart-->
     <script src="https://cdn.jsdelivr.net/npm/chartist@0.11.0/dist/chartist.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartist-plugin-legend@0.6.2/chartist-plugin-legend.min.js"></script>
