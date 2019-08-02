@@ -349,7 +349,9 @@ body {
   display: table;
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
-  width: 100%; }
+  width: 100%; 
+  min-height: 100%;
+  position: relative;}
 
 p {
   font-size: 16px;
@@ -2090,7 +2092,12 @@ header .form-inline {
 
 /* Footer */
 footer.site-footer {
-  padding: 0 1.875em; }
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  text-align: center;
+}
   footer.site-footer .footer-inner {
     color: #78909c;
     font-family: 'Open Sans';
