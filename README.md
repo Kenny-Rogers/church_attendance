@@ -18,6 +18,7 @@ $ npm install
 ## Authors
 - [@rchiskoka](https://github.com/rchriskoka)
 - [@YaaNuamah](https://github.com/YaaNuamah)
+- [@EwurasiD](https://github.com/EwurasiD)
 - [@Kenny-Rogers](https://github.com/Kenny-Rogers)
 
 ## Built With
