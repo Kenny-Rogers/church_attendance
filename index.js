@@ -27,14 +27,19 @@ app.get('/members', (req, res) => {
     res.render('pages/members')
 })
 
-//this renders the registration page containing all members for http://localhost:3000/members/ccreate
+//this renders the registration page containing all members for http://localhost:3000/members/create
 app.get('/members/create', (req, res) => {
     res.render('pages/add_member')
 })
 
-//this renders the attendance marking page containing all members for http://localhost:3000/members/ccreate
+//this renders the attendance marking page containing all members for http://localhost:3000/member_attendance/ccreate
 app.get('/member_attendance/create', (req, res) => {
     res.render('pages/mark_attendance')
+})
+
+//this renders the member details page containing all members for http://localhost:3000/members/{id}
+app.get('/members/id', (req, res) => {
+    res.render('pages/member_details')
 })
 
 //our web application serving webAPP at http://localhost:3000
