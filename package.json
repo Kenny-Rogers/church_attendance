@@ -17,8 +17,15 @@
   },
   "homepage": "https://github.com/Kenny-Rogers/church_attendance#readme",
   "dependencies": {
+    "apollo-cache-inmemory": "^1.6.2",
+    "apollo-client": "^2.6.3",
+    "apollo-link-http": "^1.5.15",
+    "dotenv": "^8.0.0",
     "ejs": "^2.6.2",
     "express": "^4.17.1",
+    "graphql": "^14.4.2",
+    "graphql-tag": "^2.10.1",
+    "node-fetch": "^2.6.0",
     "path": "^0.12.7"
   }
 }
