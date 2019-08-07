@@ -1,11 +1,12 @@
 //including modules 
 const express = require('express')
 const path = require('path')
+const gql  = require('graphql-tag')
 const fetch = require('node-fetch')
+
 const { ApolloClient } = require('apollo-client')
 const { InMemoryCache }= require('apollo-cache-inmemory')
 const { createHttpLink } = require('apollo-link-http')
-const gql  = require('graphql-tag')
 const { port, apollo_server_url } = require('./config.js')
 
 //creating an express app
@@ -36,6 +37,7 @@ app.get('/login', (req, res)=> {
 
 //this renders the datatable page containing all members for http://localhost:3000/members
 app.get('/members', (req, res) => {
+    //makes a request to the GraphQL server
     client.query({
         query: gql`
         query {
