@@ -1,9 +1,22 @@
 //including modules 
 const express = require('express')
 const path = require('path')
+const gql  = require('graphql-tag')
+const fetch = require('node-fetch')
+
+const { ApolloClient } = require('apollo-client')
+const { InMemoryCache }= require('apollo-cache-inmemory')
+const { createHttpLink } = require('apollo-link-http')
+const { port, apollo_server_url } = require('./config.js')
 
 //creating an express app
 const app = express()
+
+//creating ApolloClient
+const client = new ApolloClient({
+    link: createHttpLink({ uri: apollo_server_url , fetch:fetch}),
+    cache: new InMemoryCache()
+});
 
 //APP SETTINGS
 //creating a link to our images,stylesheets and js
@@ -24,6 +37,18 @@ app.get('/login', (req, res)=> {
 
 //this renders the datatable page containing all members for http://localhost:3000/members
 app.get('/members', (req, res) => {
+    //makes a request to the GraphQL server
+    client.query({
+        query: gql`
+        query {
+                cats{
+                id
+                name
+                }
+            }
+        `
+    }).then(data => console.log(data))
+        .catch(error => console.error(error));
     res.render('pages/members')
 })
 
@@ -43,5 +68,5 @@ app.get('/members/id', (req, res) => {
 })
 
 //our web application serving webAPP at http://localhost:3000
-app.listen(3000)
-console.log('Serving app at http://localhost:3000')
+app.listen(port)
+console.log(`Serving app at http://localhost:${port}`)
