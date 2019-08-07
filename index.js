@@ -5,7 +5,7 @@ const path = require('path')
 //including config variables
 const { port } = require('./config.js');
 
-//immediately involved function to start server
+//immediately invoked function to start server
 (() => {
     //creating an express app
     const app = express()
