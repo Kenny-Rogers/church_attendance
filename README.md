@@ -13,7 +13,7 @@ $ git clone https://github.com/Kenny-Rogers/church_attendance.git
 ```
 - Change directory into the newly cloned repository
 ```bash
-$ cd copattendancenodeclient
+$ cd church_attendance
 ```
 - Install the project 
 ```bash
