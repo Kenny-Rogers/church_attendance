@@ -11,9 +11,17 @@ This is an attendance records storage system which allows for entry and retrieva
 ```bash
 $ git clone https://github.com/Kenny-Rogers/church_attendance.git
 ```
+- Change directory into the newly cloned repository
+```bash
+$ cd copattendancenodeclient
+```
 - Install the project 
 ```bash
 $ npm install
+```
+- Start the server
+```bash
+$ node index.js
 ```
 ## Authors
 - [@rchiskoka](https://github.com/rchriskoka)
