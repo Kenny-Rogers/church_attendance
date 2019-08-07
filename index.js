@@ -3,7 +3,7 @@ const express = require("express");
 const path = require("path");
 
 //including config variables
-const { PORT } = require("./config.js");
+const { port } = require("./config.js");
 
 //immediately invoked function to start server
 (() => {
@@ -20,5 +20,7 @@ const { PORT } = require("./config.js");
   require("./routes")(app);
 
   //our web application serving webAPP at http://localhost:port
-  app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
+  app.listen({ port }, () =>
+    console.log(`Serving app at http://localhost:${port}`)
+  );
 })();
