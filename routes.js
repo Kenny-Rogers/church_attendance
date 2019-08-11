@@ -18,13 +18,13 @@ module.exports = (app) => {
         client.query({
             query: gql`
         query {
-                cats{
+                members{
                 id
                 name
                 }
             }
         `
-        }).then(data => console.log(data))
+        }).then(data => console.log(data.data.members[2]))
             .catch(error => console.error(error));
         res.render('pages/members')
     })
@@ -32,6 +32,30 @@ module.exports = (app) => {
     //this renders the registration page containing all members for http://localhost:3000/members/create
     app.get('/members/create', (req, res) => {
         res.render('pages/add_member')
+    })
+
+    app.post('/members/create', (req, res) => {
+        // console.log(req.body)
+        let form_data = req.body
+        let stringified_params = Object.keys(form_data).reduce( (strg,key) => {
+            return `${strg} ${key}:"${form_data[key]}",`
+        }, '')
+        let member_data = stringified_params.slice(0,-1)
+        client.mutate({
+            mutation: gql`
+                mutation {
+                    addMember(${member_data}){
+                        id
+                    }
+                }
+             `
+        }).then(data => {
+            console.log(data)
+            res.redirect('/members/create?status=created')
+        }).catch(error =>{
+            console.error(error)
+            res.redirect('/members/create?status=failed')
+        })
     })
 
     //this renders the attendance marking page containing all members for http://localhost:3000/member_attendance/ccreate

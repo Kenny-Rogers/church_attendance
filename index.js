@@ -1,9 +1,11 @@
 //including modules 
 const express = require('express')
 const path = require('path')
+const body_parser = require('body-parser')
 
 //including config variables
 const { port } = require('./config.js');
+
 
 //immediately invoked function to start server
 (() => {
@@ -15,6 +17,7 @@ const { port } = require('./config.js');
     app.use('/public', express.static(path.join(__dirname, '/views/static')))
     //setting up the view engine
     app.set('view engine', 'ejs')
+    app.use(body_parser.urlencoded({ extended:true }))
 
     //including router function 
     require('./routes')(app)
