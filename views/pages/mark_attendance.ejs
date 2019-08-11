@@ -7,63 +7,29 @@
             <div class="card-header">Create Attendance Record</div>
             <div class="card-body card-block">
                     <div class="form-group">
-                        <label class=" form-control-label">Date input</label>
+                        <label class=" form-control-label">Attendance Date</label>
                         <div class="input-group">
                             <div class="input-group-addon"><i class="fa fa-calendar"></i></div>
                             <input class="form-control" type='date' name='attendance_date' required>
                         </div>
                     </div>
                     <div class="form-group">
-                            <select required data-placeholder="Your Favorite Football Team" multiple class="standardSelect" tabindex="5">
+                            <select required data-placeholder="Select members present" multiple class="standardSelect" tabindex="5">
                                 <option value="" label="default"></option>
-                                <optgroup label="NFC EAST">
-                                <option>Dallas Cowboys</option>
-                                <option>New York Giants</option>
-                                <option>Philadelphia Eagles</option>
-                                <option>Washington Redskins</option>
-                            </optgroup>
-                            <optgroup label="NFC NORTH">
-                                <option>Chicago Bears</option>
-                                <option>Detroit Lions</option>
-                                <option>Green Bay Packers</option>
-                                <option>Minnesota Vikings</option>
-                            </optgroup>
-                            <optgroup label="NFC SOUTH">
-                                <option>Atlanta Falcons</option>
-                                <option>Carolina Panthers</option>
-                                <option>New Orleans Saints</option>
-                                <option>Tampa Bay Buccaneers</option>
-                            </optgroup>
-                            <optgroup label="NFC WEST">
-                                <option>Arizona Cardinals</option>
-                                <option>St. Louis Rams</option>
-                                <option>San Francisco 49ers</option>
-                                <option>Seattle Seahawks</option>
-                            </optgroup>
-                            <optgroup label="AFC EAST">
-                                <option>Buffalo Bills</option>
-                                <option>Miami Dolphins</option>
-                                <option>New England Patriots</option>
-                                <option>New York Jets</option>
-                            </optgroup>
-                            <optgroup label="AFC NORTH">
-                                <option>Baltimore Ravens</option>
-                                <option>Cincinnati Bengals</option>
-                                <option>Cleveland Browns</option>
-                                <option>Pittsburgh Steelers</option>
-                            </optgroup>
-                            <optgroup label="AFC SOUTH">
-                                <option>Houston Texans</option>
-                                <option>Indianapolis Colts</option>
-                                <option>Jacksonville Jaguars</option>
-                                <option>Tennessee Titans</option>
-                            </optgroup>
-                            <optgroup label="AFC WEST">
-                                <option>Denver Broncos</option>
-                                <option>Kansas City Chiefs</option>
-                                <option>Oakland Raiders</option>
-                                <option>San Diego Chargers</option>
-                            </optgroup>
+                                <% 
+                                let home_cells = ['Flagstaff House', 'Nima Yellow House', 'Nima Mission House', 'Nima Police Barracks', 'Cantonment', 'Ablekuma',
+                                'Mamobi', 'Odorkor', 'Sankara', 'Burma Camp', 'Agbogba', 'Russia', 'Kanda Water Works', 'Kanda Post Office', 'Teshie/Nungua']; 
+                                home_cells.forEach(home_cell => {
+                                %>
+                                    <optgroup label="<%= home_cell %>">
+                                    <%
+                                        members.forEach( member => {
+                                            if( member.home_cell == home_cell){
+                                    %> 
+                                            <option value="<%= member.id %>"><%= member.full_name %></option>
+                                    <%  } }); %> 
+                                    </optgroup>  
+                                <% }); %>
                         </select>
                     </div>
                     <div class="form-actions form-group">

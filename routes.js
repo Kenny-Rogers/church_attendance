@@ -67,7 +67,25 @@ module.exports = (app) => {
 
     //this renders the attendance marking page containing all members for http://localhost:3000/member_attendance/ccreate
     app.get('/member_attendance/create', (req, res) => {
-        res.render('pages/mark_attendance')
+         client.query({
+            query: gql`
+                query {
+                    members{
+                        id
+                        full_name
+                        home_cell
+                    }
+                }
+        `
+        }).then(api_response => { 
+            console.log(api_response) 
+            res.render('pages/mark_attendance', { members:api_response.data.members})
+        })
+        .catch(error => { 
+            console.error(error) 
+            res.render('pages/members?status=no_data')
+        });
+        
     })
 
     //this renders the member details page containing all members for http://localhost:3000/members/{id}
