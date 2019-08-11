@@ -17,16 +17,23 @@ module.exports = (app) => {
         //makes a request to the GraphQL server
         client.query({
             query: gql`
-        query {
-                members{
-                id
-                name
+                query {
+                    members{
+                        full_name
+                        home_cell
+                        occupation
+                        contact
+                    }
                 }
-            }
         `
-        }).then(data => console.log(data.data.members[2]))
-            .catch(error => console.error(error));
-        res.render('pages/members')
+        }).then(api_response => { 
+            console.log(api_response) 
+            res.render('pages/members', { members:api_response.data.members})
+        })
+        .catch(error => { 
+            console.error(error) 
+            res.render('pages/members?status=no_data')
+        });
     })
 
     //this renders the registration page containing all members for http://localhost:3000/members/create
