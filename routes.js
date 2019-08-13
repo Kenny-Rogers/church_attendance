@@ -88,6 +88,27 @@ module.exports = (app) => {
         
     })
 
+    app.post('/member_attendance/create', (req,res) => {
+        let members = [].concat(req.body.members)
+        let members_data = members.map((id) => `${id.toString()}`)
+        let attendance_data = `date:"${req.body.attendance_date}", members:[${members_data}]`;
+        client.mutate({
+            mutation: gql`
+                mutation {
+                    addAttendance(${attendance_data}){
+                        id
+                    }
+                }
+                `
+        }).then(data => {
+            console.log(data)
+            res.redirect('/member_attendance/create?status=created')
+        }).catch(error =>{
+            console.error(error)
+            res.redirect('/member_attendance/create?status=failed')
+        })
+    })
+
     //this renders the member details page containing all members for http://localhost:3000/members/{id}
     app.get('/members/id', (req, res) => {
         res.render('pages/member_details')
