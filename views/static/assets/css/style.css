@@ -2432,7 +2432,9 @@ footer.site-footer {
             flex: none; } }
 @media (max-width: 768px) {
   .navbar {
-    height: 100vh; }
+    height: 50vh; 
+    background: transparent;
+  }
     .navbar .navbar-nav li.menu-item-has-children > a:before {
       display: block !important; }
     .navbar .main-menu {
@@ -2473,7 +2475,9 @@ footer.site-footer {
 
   #left-panel {
     max-width: 100%;
-    width: 100%; }
+    width: 100%;
+  height: fit-content;
+    background-color: #f4f4f4; }
     #left-panel .navbar .navbar-nav li > a {
       max-width: inherit;
       font-size: 14px; }
