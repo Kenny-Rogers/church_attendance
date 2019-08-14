@@ -32,7 +32,7 @@ module.exports = (app) => {
         })
         .catch(error => { 
             console.error(error) 
-            res.render('pages/members?status=no_data')
+            res.render('pages/members', {members:[]})
         });
     })
 
@@ -83,7 +83,7 @@ module.exports = (app) => {
         })
         .catch(error => { 
             console.error(error) 
-            res.render('pages/members?status=no_data')
+            res.render('pages/mark_attendance', {members:[]})
         });
         
     })
