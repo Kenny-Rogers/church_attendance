@@ -1,13 +1,6 @@
-<<<<<<< HEAD
 //including modules
 const express = require("express");
 const path = require("path");
-=======
-//including modules 
-const express = require('express')
-const path = require('path')
-const body_parser = require('body-parser')
->>>>>>> d5f2cb372a0087f6198286de0be48c80fb8f71a8
 
 //including config variables
 const { port } = require("./config.js");
