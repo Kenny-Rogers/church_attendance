@@ -3,6 +3,8 @@
 This is an attendance records storage system which allows for entry and retrieval of attendance information of church members.
 
 ## Features
+- Register a member
+- Get all members data
 
 ## Screenshots
 

@@ -8,7 +8,7 @@
     <div class="card">
       <div class="card-header"><strong>Add Member</strong> Information</div>
       <div class="card-body card-block">
-        <form action="#" method="post" class="form-horizontal">
+        <form action="/members/create" method="post" class="form-horizontal">
           <div class="row form-group">
             <div class="col col-md-3">
               <label for="text-input" class=" form-control-label"
@@ -29,15 +29,86 @@
           <div class="row form-group">
             <div class="col col-md-3">
               <label for="email-input" class=" form-control-label"
+                >Date of Birth</label
+              >
+            </div>
+            <div class="col-12 col-md-9">
+              <input
+                type="date"
+                name="dob"
+                class="form-control"
+              />
+            </div>
+          </div>
+          <div class="row form-group">
+            <div class="col col-md-3">
+              <label for="email-input" class=" form-control-label">Date Baptized</label>
+            </div>
+            <div class="col-12 col-md-9">
+              <input
+                type="date"
+                name="date_baptized"
+                class="form-control"
+              />
+            </div>
+          </div>
+          <div class="row form-group">
+            <div class="col col-md-3">
+              <label for="email-input" class=" form-control-label"
                 >Contact Number</label
               >
             </div>
             <div class="col-12 col-md-9">
               <input
                 type="text"
-                name="contact_number"
-                pattern="[1-9]{1}[0-9]{9}"
+                name="contact"
+                pattern="0[25]{1}[467]{1}[0-9]{7}"
                 placeholder="0244444446"
+                class="form-control"
+              />
+            </div>
+          </div>
+          <div class="row form-group">
+            <div class="col col-md-3">
+              <label for="text-input" class=" form-control-label"
+                >Baptized by</label
+              >
+            </div>
+            <div class="col-12 col-md-9">
+              <input
+                required
+                type="text"
+                id="text-input"
+                name="baptized_by"
+                placeholder="Kofi Mensah"
+                class="form-control"
+              />
+            </div>
+          </div>
+          <div class="row form-group">
+            <div class="col col-md-3">
+              <label for="email-input" class=" form-control-label"
+                >Date Transferred into Assembly</label
+              >
+            </div>
+            <div class="col-12 col-md-9">
+              <input
+                type="date"
+                name="date_transferred_into_assembly"
+                class="form-control"
+              />
+            </div>
+          </div>
+          <div class="row form-group">
+            <div class="col col-md-3">
+              <label for="email-input" class=" form-control-label"
+                >Date Transferred out of Assembly</label
+              >
+            </div>
+            <div class="col-12 col-md-9">
+              <input
+                type="date"
+                name="date_transferred_out_of_assembly"
                 class="form-control"
               />
             </div>
@@ -71,26 +142,119 @@
               </div>
             </div>
           </div>
-
           <div class="row form-group">
             <div class="col col-md-3">
-              <label for="select" class=" form-control-label">Home Cell</label>
+              <label for="text-input" class=" form-control-label"
+                >Hometown</label
+              >
+            </div>
+            <div class="col-12 col-md-9">
+              <input
+                required
+                type="text"
+                id="text-input"
+                name="hometown"
+                placeholder="Kofi Mensah"
+                class="form-control"
+              />
+            </div>
+          </div>
+          <div class="row form-group">
+            <div class="col col-md-3">
+              <label for="home_cell" class=" form-control-label">Home Cell</label>
             </div>
             <div class="col-12 col-md-9">
               <select
-                name="select"
+                name="home_cell"
                 required
                 id="home_cell"
                 class="form-control"
               >
                 <option value="">Please select</option>
-                <option value="1">Flagstaff House</option>
-                <option value="2">Option #2</option>
-                <option value="3">Option #3</option>
+                <option value="Flagstaff House">Flagstaff House</option>
+                <option value="Nima Yellow House">Nima Yellow House</option>
+                <option value="Nima Mission House">Nima Mission House</option>
+                <option value="Nima Police Barracks">Nima Police Barracks</option>
+                <option value="Cantonment">Cantonment</option>
+                <option value="Ablekuma">Ablekuma</option>
+                <option value="Mamobi">Mamobi</option>
+                <option value="Odorkor">Odorkor</option>
+                <option value="Sankara">Sankara</option>
+                <option value="Burma Camp">Burma Camp</option>
+                <option value="Agbogba">Agbogba</option>
+                <option value="Russia">Russia</option>
+                <option value="Kanda Water Works">Kanda Water Works</option>
+                <option value="Kanda Post Office">Kanda Post Office</option>
+                <option value="Teshie/Nungua">Teshie/Nungua</option>
               </select>
             </div>
           </div>
-
+          <div class="row form-group">
+            <div class="col col-md-3">
+              <label class=" form-control-label">Martial Status</label>
+            </div>
+            <div class="col col-md-9">
+              <div class="form-check-inline form-check ">
+                <label for="Single" class="form-check-label mr-3">
+                  <input
+                    type="radio"
+                    required
+                    id="Single"
+                    name="marital_status"
+                    value="Single"
+                    class="form-check-input"
+                  />Single
+                </label>
+                <label for="Married" class="form-check-label mr-3">
+                  <input
+                    type="radio"
+                    required
+                    id="Married"
+                    name="marital_status"
+                    value="Married"
+                    class="form-check-input"
+                  />Married
+                </label>
+                <label for="Divorced" class="form-check-label ">
+                  <input
+                    type="radio"
+                    required
+                    id="Divorced"
+                    name="marital_status"
+                    value="Divorced"
+                    class="form-check-input"
+                  />Divorced
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="row form-group">
+            <div class="col col-md-3">
+              <label for="text-input" class=" form-control-label"
+                >Occupation</label
+              >
+            </div>
+            <div class="col-12 col-md-9">
+              <input
+                required
+                type="text"
+                id="text-input"
+                name="occupation"
+                placeholder="Kofi Mensah"
+                class="form-control"
+              />
+            </div>
+          </div>
+          <div class="row form-group">
+            <div class="col col-md-3">
+              <label for="text-input" class=" form-control-label"
+                >Remarks</label
+              >
+            </div>
+            <div class="col-12 col-md-9">
+            <textarea name="remarks" id="textarea-input" placeholder="Remarks..." class="form-control"></textarea>
+            </div>
+          </div>
           <div class="form-actions form-group">
             <button type="submit" class="btn btn-primary btn-sm">
               <i class="fa fa-dot-circle-o"></i> Submit

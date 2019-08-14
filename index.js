@@ -1,20 +1,29 @@
+<<<<<<< HEAD
 //including modules
 const express = require("express");
 const path = require("path");
+=======
+//including modules 
+const express = require('express')
+const path = require('path')
+const body_parser = require('body-parser')
+>>>>>>> d5f2cb372a0087f6198286de0be48c80fb8f71a8
 
 //including config variables
 const { port } = require("./config.js");
+
 
 //immediately invoked function to start server
 (() => {
   //creating an express app
   const app = express();
 
-  //APP SETTINGS
-  //creating a link to our images,stylesheets and js
-  app.use("/public", express.static(path.join(__dirname, "/views/static")));
-  //setting up the view engine
-  app.set("view engine", "ejs");
+    //APP SETTINGS
+    //creating a link to our images,stylesheets and js
+    app.use('/public', express.static(path.join(__dirname, '/views/static')))
+    //setting up the view engine
+    app.set('view engine', 'ejs')
+    app.use(body_parser.urlencoded({ extended:true }))
 
   //including router function
   require("./routes")(app);
