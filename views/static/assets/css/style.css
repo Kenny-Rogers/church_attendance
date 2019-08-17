@@ -312,7 +312,7 @@ Googel Fonts  */
       -webkit-transition: all 0.2s linear;
       transition: all 0.2s linear; }
       .tdl-holder label a:hover {
-        color: rgba(153, 171, 180, 0.8); }
+        color: rgba(72, 61, 139, 0.8); }
   .tdl-holder input[type="checkbox"] {
     cursor: pointer;
     opacity: 0;
@@ -625,7 +625,7 @@ aside.left-panel {
         display: none; }
       .navbar .navbar-nav li > a {
         background: none !important;
-        color: #607d8b;
+        color: rgba(72, 61, 139, 0.8);
         display: inline-block;
         font-size: 14px;
         line-height: 26px;
@@ -633,16 +633,19 @@ aside.left-panel {
         position: relative;
         width: 100%; }
         .navbar .navbar-nav li > a:hover, .navbar .navbar-nav li > a:hover .menu-icon {
-          color: #03a9f3; }
+          /* color: #03a9f3; */
+          color: rgba(72, 61, 139, 0.8);
+        }
         .navbar .navbar-nav li > a .menu-icon {
-          color: #607d8b;
+          /* color: #607d8b; */
+          color: rgba(72, 61, 139, 0.8);
           float: left;
           margin-top: 8px;
           width: 55px;
           text-align: left;
           z-index: 9; }
-        .navbar .navbar-nav li > a .menu-title-text {
-          font-size: 14px; }
+          .navbar .navbar-nav li > a .menu-title-text {
+            font-size: 14px; }
         .navbar .navbar-nav li > a .badge {
           border-radius: 0;
           font-weight: 600;
@@ -662,13 +665,13 @@ aside.left-panel {
             height: 8px;
             border-style: solid;
             border-width: 1px;
-            border-color: #607d8b #607d8b transparent transparent;
+            border-color: rgba(72, 61, 139, 0.8) transparent transparent;
             -webkit-transform: rotate(45deg);
                     transform: rotate(45deg);
             -webkit-transition: all .25s ease;
             transition: all .25s ease; }
           .navbar .navbar-nav li.menu-item-has-children a:hover:before {
-            border-color: #03a9f3 #03a9f3 transparent transparent; }
+            border-color:rgba(72, 61, 139, 0.8) rgba(72, 61, 139, 0.8) transparent transparent; }
         .navbar .navbar-nav li.menu-item-has-children .sub-menu {
           background: #fff;
           border: none;
@@ -700,7 +703,7 @@ aside.left-panel {
           top: 20px;
           right: -5px; }
         .navbar .navbar-nav li.menu-item-has-children.show a:hover:before {
-          border-color: transparent #03a9f3 #03a9f3 transparent; }
+          border-color: transparent rgba(72, 61, 139, 0.8) rgba(72, 61, 139, 0.8)transparent; }
         .navbar .navbar-nav li.menu-item-has-children.show .sub-menu {
           max-height: 1000px;
           opacity: 1;
@@ -709,7 +712,7 @@ aside.left-panel {
 .navbar .navbar-nav > .active > a,
 .navbar .navbar-nav > .active > a:focus,
 .navbar .navbar-nav > .active > a:hover {
-  color: #03a9f3; }
+  color: rgba(72, 61, 139, 0.8); }
 
 .navbar-nav li span.count {
   background: #a9d86e;
@@ -826,7 +829,8 @@ aside.left-panel {
 
 /* Right panel */
 .right-panel {
-     background: #f1f2f7;
+     /* background: #f1f2f7; */
+     background: rgba(72, 61, 139, 0.8);
     margin-left: 280px;
     padding-top: 55px;
     height: 100%;
@@ -1384,7 +1388,7 @@ header .form-inline {
         border-color: transparent; }
     .card .nav-tabs .active a {
       border-color: #e8e9ef;
-      color: #868e96 !important; }
+      color:rgba(72, 61, 139, 0.8) !important; }
 
 .action-menu .dropdown-toggle i {
   font-size: 12px; }
@@ -1548,13 +1552,13 @@ header .form-inline {
 .custom-tab .nav-tabs > .active > a:focus,
 .custom-tab .nav-tabs > li.active > a:hover {
   border-color: transparent transparent;
-  color: #ff2e44;
+  color: rgba(72, 61, 139, 0.8);
   position: relative; }
 
 .custom-tab .nav-tabs > a.active:after,
 .custom-tab .nav-tabs > li.active > a:focus:after,
 .custom-tab .nav-tabs > li.active > a:hover:after {
-  background: #ff2e44;
+  background: rgba(72, 61, 139, 0.8);
   bottom: -1px;
   content: "";
   height: 2px;
@@ -1730,18 +1734,50 @@ header .form-inline {
       font-size: 14px; }
 
 .login-logo {
-  text-align: center;
-  margin-bottom: 15px; }
+  text-align: center;}
   .login-logo span {
     color: #ffffff;
     font-size: 24px; }
+.fontFam {
+  font-family: Rubik, Lato, "lucida grande";
+  font-weight: 700;
+  line-height: 48px;
+  font-size:;
+  color:#03a9f4;
+}
+
+.btnPent {
+  background-color:rgba(72, 61, 139, 0.8);
+}
+
+
+.formStyle {
+    padding: 30px 30px 20px;
+    border-radius: 2px;
+}
+
+.loginBackgroundImage {
+  background-image: linear-gradient(to  bottom left, blue, yellow);
+}
+
+.loginBackgroundOverlay {
+  position: fixed; 
+  width: 100%;
+  height: 100%; 
+  top: 0; 
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.67); 
+  z-index: 2;
+}
 
 .login-content {
   max-width: 540px;
-  margin: 8vh auto; }
+  margin: 33vh auto; }
 
 .login-form {
-  background: #ffffff;
+  background: rgba(255,255,255,0.03);
   padding: 30px 30px 20px;
   border-radius: 2px; }
 
