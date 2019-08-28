@@ -30,6 +30,19 @@
     <!-- D3 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
 
+    <!-- Sweet  alert-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <script>
+
+    function successMessage(){
+    Swal.fire({
+        type: 'success',
+        title: 'Success',
+        text: 'Message has been sent Succefully'
+    })
+}
+</script>
+
     <!-- Calendar HeatMap -->
     <script type="text/javascript" src="/public/assets/js/cal-heatmap.min.js"></script>
     <script type="text/javascript">
@@ -106,6 +119,13 @@
     <script>
         jQuery(document).ready(function($) {
             "use strict";
+
+            //sms alert trigger
+            let searchParams = new URLSearchParams(window.location.search)
+            if(searchParams.has('status')){
+                if(searchParams.get('status') == 'success')
+                    successMessage()
+            }
             
             // Line Chart  #flotLine5 End
             // Traffic Chart using chartist

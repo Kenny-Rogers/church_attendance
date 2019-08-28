@@ -1,7 +1,7 @@
 const axios = require('axios')
 const {sms_api_id, sms_api_secret,sms_api_url, sms_from} = require('./config')
 
-async function send_message(number="0500003941", message="Test message"){
+const send_message = async (number="0500003941", message="Test message") => {
     try { 
 
         let result = await axios({

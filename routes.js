@@ -1,5 +1,6 @@
 const gql = require('graphql-tag')
 const client = require('./apollo_client')
+const { send_message }= require('./utility')
 
 module.exports = (app) => {
     //this renders the dashboard for http://localhost:3000/
@@ -112,5 +113,23 @@ module.exports = (app) => {
     //this renders the member details page containing all members for http://localhost:3000/members/{id}
     app.get('/members/id', (req, res) => {
         res.render('pages/member_details')
+    })
+
+    //this renders the page that sends the sms
+    app.get('/send_sms', (req,res) => {
+        res.render('pages/send_sms')
+    })
+
+    app.post('/send_sms/send', (req,res) => {
+        let numbersString = req.body.numbers
+        let message = req.body.message
+        let numbersArray = numbersString.split(',')
+        numbersArray.map(number => {
+            send_message(number.trim(), message)
+            .then( data => {
+                console.log(data)
+            })
+        })
+        res.redirect(`/send_sms?status=success`)
     })
 }
