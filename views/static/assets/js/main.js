@@ -85,6 +85,10 @@ jQuery(document).ready(function($) {
 		} 
 		
 	});
+
+	// All members page
+	$("#bootstrap-data-table").removeClass('dataTable');
+	$("#bootstrap-data-table_length label select").addClass("mx-2");
   
  
 });

@@ -564,7 +564,7 @@ canvas {
 /* Global Styles */
 /* Main Styles */
 aside.left-panel {
-  background: #fff;
+  background: rgb(255, 255, 255);
   height: 100vh;
   padding: 0;
   vertical-align: top;
@@ -2123,7 +2123,7 @@ header .form-inline {
       border-radius: 0 !important;
       color: #292b35; }
     .dataTables_paginate .pagination li.active a {
-      background: #292b35;
+      background:rgba(72, 61, 139, 0.8);
       border-color: #292b35;
       color: #fff; }
     .dataTables_paginate .pagination li:hover a {
@@ -2468,7 +2468,7 @@ footer.site-footer {
             flex: none; } }
 @media (max-width: 768px) {
   .navbar {
-    height: 50vh; 
+    height: 238px; 
     background: transparent;
   }
     .navbar .navbar-nav li.menu-item-has-children > a:before {
@@ -2513,7 +2513,7 @@ footer.site-footer {
     max-width: 100%;
     width: 100%;
   height: fit-content;
-    background-color: #f4f4f4; }
+    background-color: rgb(255, 255, 255) }
     #left-panel .navbar .navbar-nav li > a {
       max-width: inherit;
       font-size: 14px; }
